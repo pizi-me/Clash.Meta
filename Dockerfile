@@ -17,7 +17,7 @@ RUN FILE_NAME=`sh file-name.sh` && echo $FILE_NAME && \
 FROM alpine:latest
 LABEL org.opencontainers.image.source="https://github.com/MetaCubeX/Clash.Meta"
 
-RUN apk add --no-cache ca-certificates tzdata iptables
+RUN apk add --no-cache ca-certificates tzdata iptables iproute2
 
 VOLUME ["/root/.config/clash/"]
 
