@@ -24,4 +24,4 @@ VOLUME ["/root/.config/clash/"]
 COPY --from=builder /clash-config/ /root/.config/clash/
 COPY --from=builder /clash/clash /clash
 RUN chmod +x /clash
-ENTRYPOINT [ "/clash" ]
+ENTRYPOINT [ "/root/.config/clash/entrypoint.sh" ]
